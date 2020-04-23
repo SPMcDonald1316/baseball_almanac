@@ -76,25 +76,61 @@ require 'csv'
 #   puts "#{t.player_id} #{t.year_id} saved"
 # end
 
-CSV.read(Rails.root.join('lib', 'seeds', 'Fielding.csv'), headers:true, encoding: 'ISO-8859-1').each do |row|
-  t = FieldingStat.new
+# CSV.read(Rails.root.join('lib', 'seeds', 'Fielding.csv'), headers:true, encoding: 'ISO-8859-1').each do |row|
+#   t = FieldingStat.new
+#   t.player_id = row['playerID']
+#   t.year_id = row['yearID']
+#   t.stint = row['stint']
+#   t.team_id = row['teamID']
+#   t.lg_id = row['lgID']
+#   t.pos = row['POS']
+#   t.g = row['G']
+#   t.gs = row['GS']
+#   t.inn_outs = row['InnOuts']
+#   t.po = row['PO']
+#   t.a = row['A']
+#   t.e = row['E']
+#   t.dp = row['DP']
+#   t.pb = row['PB']
+#   t.wp = row['WP']
+#   t.sb = row['SB']
+#   t.cs = row['CS']
+#   t.save
+#   puts "#{t.player_id} #{t.year_id} saved"
+# end
+
+CSV.foreach(Rails.root.join('lib', 'seeds', 'Pitching.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+  t = PitchingStat.new
   t.player_id = row['playerID']
   t.year_id = row['yearID']
   t.stint = row['stint']
   t.team_id = row['teamID']
   t.lg_id = row['lgID']
-  t.pos = row['POS']
+  t.w = row['W']
+  t.l = row['L']
   t.g = row['G']
   t.gs = row['GS']
-  t.inn_outs = row['InnOuts']
-  t.po = row['PO']
-  t.a = row['A']
-  t.e = row['E']
-  t.dp = row['DP']
-  t.pb = row['PB']
+  t.cg = row['CG']
+  t.sho = row['SHO']
+  t.sv = row['SV']
+  t.ip_outs = row['IPouts']
+  t.h = row['H']
+  t.er = row['ER']
+  t.hr = row['HR']
+  t.bb = row['BB']
+  t.so = row['SO']
+  t.ba_opp = row['BAOpp']
+  t.era = row['ERA']
+  t.ibb = row['IBB']
   t.wp = row['WP']
-  t.sb = row['SB']
-  t.cs = row['CS']
+  t.hbp = row['HBP']
+  t.bk = row['BK']
+  t.bfp = row['BFP']
+  t.gf = row['GF']
+  t.r = row['R']
+  t.sh = row['SH']
+  t.sf = row['SF']
+  t.gidp = row['GIDP']
   t.save
   puts "#{t.player_id} #{t.year_id} saved"
 end
