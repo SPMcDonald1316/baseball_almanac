@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_23_020201) do
+ActiveRecord::Schema.define(version: 2020_04_23_030015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "fielding_stats", force: :cascade do |t|
+    t.string "player_id"
+    t.integer "year_id"
+    t.integer "stint"
+    t.string "team_id"
+    t.string "lg_id"
+    t.string "pos"
+    t.integer "g"
+    t.integer "gs"
+    t.integer "inn_outs"
+    t.integer "po"
+    t.integer "a"
+    t.integer "e"
+    t.integer "dp"
+    t.integer "pb"
+    t.integer "wp"
+    t.integer "sb"
+    t.integer "cs"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "franchises", force: :cascade do |t|
     t.string "franch_id"
