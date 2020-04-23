@@ -1,0 +1,7 @@
+@players.map do |player|
+  {
+    name: player.fullname,
+    debut: player.debut,
+    final_game: player.final_game,
+  }
+end
