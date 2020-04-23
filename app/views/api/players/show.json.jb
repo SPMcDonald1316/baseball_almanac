@@ -1,0 +1,11 @@
+{
+  Name: @player.fullname,
+  Height: @player.height,
+  Weight: @player.weight,
+  Debut: @player.debut,
+  Final_Game: @player.final_game,
+  Hitting_Stats: @hitting,
+  Pitching_Stats: @pitching,
+  Fielding_Stats: @fielding
+
+}
