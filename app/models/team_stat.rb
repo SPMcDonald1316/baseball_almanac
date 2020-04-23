@@ -1,0 +1,2 @@
+class TeamStat < ApplicationRecord
+end
