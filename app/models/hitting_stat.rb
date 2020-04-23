@@ -1,0 +1,2 @@
+class HittingStat < ApplicationRecord
+end
