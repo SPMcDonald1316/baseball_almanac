@@ -1,0 +1,2 @@
+class PostHittingStat < ApplicationRecord
+end

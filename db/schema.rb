@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_23_133959) do
+ActiveRecord::Schema.define(version: 2020_04_24_192641) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -133,6 +133,33 @@ ActiveRecord::Schema.define(version: 2020_04_23_133959) do
     t.date "final_game"
     t.string "retro_id"
     t.string "bbref_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "post_hitting_stats", force: :cascade do |t|
+    t.integer "year_id"
+    t.string "round"
+    t.string "player_id"
+    t.string "team_id"
+    t.string "lg_id"
+    t.integer "g"
+    t.integer "ab"
+    t.integer "r"
+    t.integer "h"
+    t.integer "doubles"
+    t.integer "triples"
+    t.integer "hr"
+    t.integer "rbi"
+    t.integer "sb"
+    t.integer "cs"
+    t.integer "bb"
+    t.integer "so"
+    t.integer "ibb"
+    t.integer "hbp"
+    t.integer "sh"
+    t.integer "sf"
+    t.integer "gidp"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

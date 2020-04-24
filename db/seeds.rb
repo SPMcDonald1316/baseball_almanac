@@ -189,3 +189,30 @@ require 'csv'
 #   puts "#{t.team_id} #{t.year_id} saved"
 # end
 
+CSV.foreach(Rails.root.join('lib', 'seeds', 'BattingPost.csv'), headers: true, encoding: 'ISO-8859-1') do |row|
+  t = PostHittingStat.new
+  t.year_id = row['yearID']
+  t.round = row['round']
+  t.player_id = row['playerID']
+  t.team_id = row['teamID']
+  t.lg_id = row['lgID']
+  t.g = row['G']
+  t.ab = row['AB']
+  t.r = row['R']
+  t.h = row['H']
+  t.doubles = row['2B']
+  t.triples = row['3B']
+  t.hr = row['HR']
+  t.rbi = row['RBI']
+  t.sb = row['SB']
+  t.cs = row['CS']
+  t.bb = row['BB']
+  t.so = row['SO']
+  t.ibb = row['IBB']
+  t.hbp = row['HBP']
+  t.sh = row['SH']
+  t.sf = row['SF']
+  t.gidp = row['GIDP']
+  t.save
+  puts "#{t.year_id} #{t.player_id} saved"
+end
