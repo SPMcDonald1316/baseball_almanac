@@ -1,0 +1,4 @@
+{
+  franchise: @franchise.franch_name,
+  stats: @team_stats
+}

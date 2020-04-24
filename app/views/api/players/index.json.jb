@@ -1,5 +1,6 @@
 @players.map do |player|
   {
+    id: player.id,
     name: player.fullname,
     debut: player.debut,
     final_game: player.final_game,

@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     get "/players/:id" => "players#show"
 
     get "/franchises" => "franchises#index"
-    get "/franchises" => "franchises#show"
+    get "/franchises/:id" => "franchises#show"
   end
 end
