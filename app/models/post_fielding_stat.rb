@@ -1,0 +1,2 @@
+class PostFieldingStat < ApplicationRecord
+end
