@@ -1,11 +1,13 @@
 {
-  id: player.id,
+  id: @player.id,
   Name: @player.fullname,
   Height: @player.height,
   Weight: @player.weight,
   Debut: @player.debut,
   Final_Game: @player.final_game,
   Hitting_Stats: @hitting,
+  Post_Hitting: @post_hitting,
   Pitching_Stats: @pitching,
-  Fielding_Stats: @fielding
+  Fielding_Stats: @fielding,
+  Post_Fielding: @post_fielding
 }
