@@ -1,0 +1,2 @@
+class PlayByPlayTwoThousandTen < ApplicationRecord
+end

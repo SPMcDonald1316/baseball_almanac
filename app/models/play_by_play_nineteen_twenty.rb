@@ -1,0 +1,2 @@
+class PlayByPlayNineteenTwenty < ApplicationRecord
+end
