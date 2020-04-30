@@ -245,10 +245,10 @@ require 'csv'
 #   puts "#{t.game_id} saved"
 # end
 
-CSV.foreach(Rails.root.join('lib', 'seeds', '1920s_final_pbp.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
-  t = PlayByPlayNineteenTwenty.create(row.to_hash)
-  puts "#{t.game_id} saved"
-end
+# CSV.foreach(Rails.root.join('lib', 'seeds', '1920s_final_pbp.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+#   t = PlayByPlayNineteenTwenty.create(row.to_hash)
+#   puts "#{t.game_id} saved"
+# end
 
 # CSV.foreach(Rails.root.join('lib', 'seeds', '1930s_final_pbp.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
 #   t = PlayByPlayNineteenThirty.create(row.to_hash)
@@ -275,22 +275,37 @@ end
 #   puts "#{t.game_id} saved"
 # end
 
-# CSV.foreach(Rails.root.join('lib', 'seeds', '1980s_final_pbp.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+# CSV.foreach(Rails.root.join('lib', 'seeds', '1980s_pbp.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
 #   t = PlayByPlayNineteenEighty.create(row.to_hash)
 #   puts "#{t.game_id} saved"
 # end
 
-# CSV.foreach(Rails.root.join('lib', 'seeds', '1990s_final_pbp.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+# CSV.foreach(Rails.root.join('lib', 'seeds', '1990sfields_pbp.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
 #   t = PlayByPlayNineteenNinety.create(row.to_hash)
 #   puts "#{t.game_id} saved"
 # end
 
-# CSV.foreach(Rails.root.join('lib', 'seeds', '2000s_final_pbp.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+# CSV.foreach(Rails.root.join('lib', 'seeds', '1990sfields_pbp2.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+#   t = PlayByPlayNineteenNinety.create(row.to_hash)
+#   puts "#{t.game_id} saved"
+# end
+
+# CSV.foreach(Rails.root.join('lib', 'seeds', '2000sfields_pbp.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
 #   t = PlayByPlayTwoThousand.create(row.to_hash)
 #   puts "#{t.game_id} saved"
 # end
 
-# CSV.foreach(Rails.root.join('lib', 'seeds', '2010s_final_pbp.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+# CSV.foreach(Rails.root.join('lib', 'seeds', '2000sfields_pbp2.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+#   t = PlayByPlayTwoThousand.create(row.to_hash)
+#   puts "#{t.game_id} saved"
+# end
+
+# CSV.foreach(Rails.root.join('lib', 'seeds', '2010sfields_pbp.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+#   t = PlayByPlayTwoThousandTen.create(row.to_hash)
+#   puts "#{t.game_id} saved"
+# end
+
+# CSV.foreach(Rails.root.join('lib', 'seeds', '2010sfields_pbp2.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
 #   t = PlayByPlayTwoThousandTen.create(row.to_hash)
 #   puts "#{t.game_id} saved"
 # end

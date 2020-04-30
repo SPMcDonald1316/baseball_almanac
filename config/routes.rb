@@ -12,5 +12,8 @@ Rails.application.routes.draw do
 
     get "/franchises" => "franchises#index"
     get "/franchises/:id" => "franchises#show"
+
+    get "/games" => "games#index"
+    get "/games/:game_id" => "games#show"
   end
 end

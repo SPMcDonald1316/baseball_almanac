@@ -1,0 +1,6 @@
+@games.map do |game|
+  {
+    game_id: game.game_id,
+    away_team_id: game.away_team_id
+  }
+end
