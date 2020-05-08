@@ -5,7 +5,7 @@ class Api::FranchisesController < ApplicationController
   end
 
   def show
-    @franchise = Franchise.find_by(id: params[:id])
+    @franchise = Franchise.find_by(franch_id: params[:franch_id])
     @team_stats = TeamStat.where(franch_id: @franchise.franch_id)
     render 'show.json.jb'
   end
