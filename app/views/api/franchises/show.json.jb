@@ -1,4 +1,5 @@
 {
-  team_name: @franchise.franch_name,
+  franch_id: @franchise.franch_id,
+  franch_name: @franchise.franch_name,
   stats: @team_stats
 }
