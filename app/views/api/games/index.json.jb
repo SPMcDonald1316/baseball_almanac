@@ -1,6 +1,8 @@
 @games.map do |game|
   {
     game_id: game.game_id,
-    away_team_id: game.away_team_id
+    home_team: game.home_team,
+    away_team: game.away_team,
+    game_date: game.game_date
   }
 end

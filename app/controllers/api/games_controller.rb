@@ -51,7 +51,7 @@ class Api::GamesController < ApplicationController
     when 2000..2009
       @game = PlayByPlayTwoThousand.where("game_id LIKE ?", "#{params[:game_id]}")
     when 2010..2019
-      @game = PlayByPlayTwoThousandTen.where("game_id LIKE ?", "#{params[:game_id]}").order("inn_ct")
+      @game = PlayByPlayTwoThousandTen.where("game_id LIKE ?", "#{params[:game_id]}")
     end
     render 'show.json.jb'
   end

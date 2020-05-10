@@ -1,12 +1,12 @@
 @game.map do |event|
   {
     inning: event.inn_ct,
-    batting: event.bat_home_id,
+    batting: event.batting,
     outs: event.outs_ct,
     balls: event.balls_ct,
     strikes: event.strikes_ct,
-    batter: event.resp_bat_id,
-    pitcher: event.resp_pit_id,
+    batter: event.batter,
+    pitcher: event.pitcher,
     event: event.event_tx
   }
 end
