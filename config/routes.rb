@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
     get "/franchises" => "franchises#index"
     get "/franchises/:franch_id" => "franchises#show"
+    get "/franchises/:franch_id/:year_id" => "franchises#year_stats"
 
     get "/games" => "games#index"
     get "/games/:game_id" => "games#show"

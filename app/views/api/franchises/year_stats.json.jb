@@ -1,0 +1,5 @@
+{
+  franch_id: @franchise.franch_id,
+  franch_name: @franchise.franch_name,
+  stats: @year_stats
+}
