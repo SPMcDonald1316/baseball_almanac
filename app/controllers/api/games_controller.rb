@@ -32,26 +32,37 @@ class Api::GamesController < ApplicationController
     case year
     when 1918..1919
       @game = GamesNineteenTen.where("game_id LIKE ?", "#{params[:game_id]}")
+      @game = @game.order("inn_ct")
     when 1920..1929
       @game = PlayByPlayNineteenTwenty.where("game_id LIKE ?", "#{params[:game_id]}")
+      @game = @game.order("inn_ct")
     when 1930..1939
       @game = PlayByPlayNineteenThirty.where("game_id LIKE ?", "#{params[:game_id]}")
+      @game = @game.order("inn_ct")
     when 1940..1949
       @game = PlayByPlayNineteenForty.where("game_id LIKE ?", "#{params[:game_id]}")
+      @game = @game.order("inn_ct")
     when 1950..1959
       @game = PlayByPlayNineteenFifty.where("game_id LIKE ?", "#{params[:game_id]}")
+      @game = @game.order("inn_ct")
     when 1960..1969
       @game = PlayByPlayNineteenSixty.where("game_id LIKE ?", "#{params[:game_id]}")
+      @game = @game.order("inn_ct")
     when 1970..1979
       @game = PlayByPlayNineteenSeventy.where("game_id LIKE ?", "#{params[:game_id]}")
+      @game = @game.order("inn_ct")
     when 1980..1989
       @game = PlayByPlayNineteenEighty.where("game_id LIKE ?", "#{params[:game_id]}")
+      @game = @game.order("inn_ct")
     when 1990..1999
       @game = PlayByPlayNineteenNinety.where("game_id LIKE ?", "#{params[:game_id]}")
+      @game = @game.order("inn_ct")
     when 2000..2009
       @game = PlayByPlayTwoThousand.where("game_id LIKE ?", "#{params[:game_id]}")
+      @game = @game.order("inn_ct")
     when 2010..2019
       @game = PlayByPlayTwoThousandTen.where("game_id LIKE ?", "#{params[:game_id]}")
+      @game = @game.order("inn_ct")
     end
     render 'show.json.jb'
   end
