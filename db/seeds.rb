@@ -309,3 +309,39 @@ require 'csv'
 #   t = PlayByPlayTwoThousandTen.create(row.to_hash)
 #   puts "#{t.game_id} saved"
 # end
+
+# CSV.foreach(Rails.root.join('lib', 'seeds', 'PitchingPost.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+#   t = PostPitchingStat.new
+#   t.player_id = row['playerID']
+#   t.year_id = row['yearID']
+#   t.round = row['round']
+#   t.team_id = row['teamID']
+#   t.lg_id = row['lgID']
+#   t.w = row['W']
+#   t.l = row['L']
+#   t.g = row['G']
+#   t.gs = row['GS']
+#   t.cg = row['CG']
+#   t.sho = row['SHO']
+#   t.sv = row['SV']
+#   t.ip_outs = row['IPouts']
+#   t.h = row['H']
+#   t.er = row['ER']
+#   t.hr = row['HR']
+#   t.bb = row['BB']
+#   t.so = row['SO']
+#   t.ba_opp = row['BAOpp']
+#   t.era = row['ERA']
+#   t.ibb = row['IBB']
+#   t.wp = row['WP']
+#   t.hbp = row['HBP']
+#   t.bk = row['BK']
+#   t.bfp = row['BFP']
+#   t.gf = row['GF']
+#   t.r = row['R']
+#   t.sh = row['SH']
+#   t.sf = row['SF']
+#   t.gidp = row['GIDP']
+#   t.save
+#   puts "#{t.player_id} #{t.year_id} saved"
+# end
