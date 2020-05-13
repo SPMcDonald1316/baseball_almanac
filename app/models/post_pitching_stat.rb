@@ -1,0 +1,2 @@
+class PostPitchingStat < ApplicationRecord
+end

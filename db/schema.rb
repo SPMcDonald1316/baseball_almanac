@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_26_185433) do
+ActiveRecord::Schema.define(version: 2020_05_12_235903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -630,6 +630,41 @@ ActiveRecord::Schema.define(version: 2020_04_26_185433) do
     t.integer "so"
     t.integer "ibb"
     t.integer "hbp"
+    t.integer "sh"
+    t.integer "sf"
+    t.integer "gidp"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "post_pitching_stats", force: :cascade do |t|
+    t.string "player_id"
+    t.integer "year_id"
+    t.string "round"
+    t.string "team_id"
+    t.string "lg_id"
+    t.integer "w"
+    t.integer "l"
+    t.integer "g"
+    t.integer "gs"
+    t.integer "cg"
+    t.integer "sho"
+    t.integer "sv"
+    t.integer "ip_outs"
+    t.integer "h"
+    t.integer "er"
+    t.integer "hr"
+    t.integer "bb"
+    t.integer "so"
+    t.decimal "ba_opp", precision: 4, scale: 3
+    t.string "era"
+    t.integer "ibb"
+    t.integer "wp"
+    t.integer "hbp"
+    t.integer "bk"
+    t.integer "bfp"
+    t.integer "gf"
+    t.integer "r"
     t.integer "sh"
     t.integer "sf"
     t.integer "gidp"

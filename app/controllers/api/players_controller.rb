@@ -9,6 +9,7 @@ class Api::PlayersController < ApplicationController
     @hitting = HittingStat.where(player_id: @player.player_id)
     @post_hitting = PostHittingStat.where(player_id: @player.player_id)
     @pitching = PitchingStat.where(player_id: @player.player_id)
+    # @post_pitching = PitchingStat.where(player_id: @player.player_id)
     @fielding = FieldingStat.where(player_id: @player.player_id)
     @post_fielding = PostFieldingStat.where(player_id: @player.player_id)
     render 'show.json.jb'
