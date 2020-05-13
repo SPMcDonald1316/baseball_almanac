@@ -10,5 +10,9 @@
   pitching_stats: @pitching,
   post_pitching: @post_pitching,
   fielding_stats: @fielding,
-  post_fielding: @post_fielding
+  post_fielding: @post_fielding,
+  allstar: @allstars,
+  awards: @awards,
+  halloffame: @hall_of_fame,
+  salaries: @salaries
 }

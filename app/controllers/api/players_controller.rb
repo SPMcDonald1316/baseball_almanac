@@ -12,6 +12,10 @@ class Api::PlayersController < ApplicationController
     @post_pitching = PostPitchingStat.where(player_id: @player.player_id)
     @fielding = FieldingStat.where(player_id: @player.player_id)
     @post_fielding = PostFieldingStat.where(player_id: @player.player_id)
+    @allstars = Allstar.where(player_id: @player.player_id)
+    @awards = PlayerAward.where(player_id: @player.player_id)
+    @hall_of_fame = HallOfFame.where(player_id: @player.player_id).find_by(inducted: "Y")
+    @salaries = Salary.where(player_id: @player.player_id)
     render 'show.json.jb'
   end
 end
