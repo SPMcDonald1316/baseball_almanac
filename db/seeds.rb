@@ -345,3 +345,45 @@ require 'csv'
 #   t.save
 #   puts "#{t.player_id} #{t.year_id} saved"
 # end
+
+# CSV.foreach(Rails.root.join('lib', 'seeds', 'AllstarFull.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+#   t = Allstar.new
+#   t.player_id = row['playerID']
+#   t.year_id = row['yearID']
+#   t.game_id = row['gameID']
+#   t.team_id = row['teamID']
+#   t.lg_id = row['lgID']
+#   t.save
+#   puts "#{t.player_id} #{t.year_id} saved"
+# end
+
+# CSV.foreach(Rails.root.join('lib', 'seeds', 'AwardsPlayers.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+#   t = PlayerAward.new
+#   t.player_id = row['playerID']
+#   t.award_id = row['awardID']
+#   t.year_id = row['yearID']
+#   t.lg_id = row['lgID']
+#   t.save
+#   puts "#{t.player_id} #{t.year_id} saved"
+# end
+
+# CSV.foreach(Rails.root.join('lib', 'seeds', 'HallOfFame.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+#   t = HallOfFame.new
+#   t.player_id = row['playerID']
+#   t.year_id = row['yearID']
+#   t.inducted = row['inducted']
+#   t.category = row['category']
+#   t.save
+#   puts "#{t.player_id} #{t.year_id} saved"
+# end
+
+CSV.foreach(Rails.root.join('lib', 'seeds', 'Salaries.csv'), headers:true, encoding: 'ISO-8859-1') do |row|
+  t = Salary.new
+  t.year_id = row['yearID']
+  t.team_id = row['teamID']
+  t.lg_id = row['lgID']
+  t.player_id = row['playerID']
+  t.salary = row['salary']
+  t.save
+  puts "#{t.player_id} #{t.year_id} saved"
+end

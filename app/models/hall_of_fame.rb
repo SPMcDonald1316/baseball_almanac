@@ -1,0 +1,2 @@
+class HallOfFame < ApplicationRecord
+end

@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_12_235903) do
+ActiveRecord::Schema.define(version: 2020_05_13_013701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "allstars", force: :cascade do |t|
+    t.string "player_id"
+    t.integer "year_id"
+    t.string "game_id"
+    t.string "team_id"
+    t.string "lg_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "fielding_stats", force: :cascade do |t|
     t.string "player_id"
@@ -83,6 +93,15 @@ ActiveRecord::Schema.define(version: 2020_05_12_235903) do
     t.string "run1_dest_id"
     t.string "run2_dest_id"
     t.string "run3_dest_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "hall_of_fames", force: :cascade do |t|
+    t.string "player_id"
+    t.integer "year_id"
+    t.string "inducted"
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -559,6 +578,15 @@ ActiveRecord::Schema.define(version: 2020_05_12_235903) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "player_awards", force: :cascade do |t|
+    t.string "player_id"
+    t.string "award_id"
+    t.integer "year_id"
+    t.string "lg_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "players", force: :cascade do |t|
     t.string "player_id"
     t.integer "birth_year"
@@ -668,6 +696,16 @@ ActiveRecord::Schema.define(version: 2020_05_12_235903) do
     t.integer "sh"
     t.integer "sf"
     t.integer "gidp"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "salaries", force: :cascade do |t|
+    t.string "year_id"
+    t.string "team_id"
+    t.string "lg_id"
+    t.string "player_id"
+    t.integer "salary"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
