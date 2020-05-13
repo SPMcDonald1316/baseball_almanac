@@ -8,6 +8,7 @@
   hitting_stats: @hitting,
   post_hitting: @post_hitting,
   pitching_stats: @pitching,
+  post_pitching: @post_pitching,
   fielding_stats: @fielding,
   post_fielding: @post_fielding
 }
