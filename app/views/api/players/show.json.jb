@@ -1,7 +1,7 @@
 {
   id: @player.id,
   name: @player.fullname,
-  height: @player.height,
+  height: @player.height_ft,
   weight: @player.weight,
   debut: @player.debut_friendly,
   final_game: @player.final_friendly,

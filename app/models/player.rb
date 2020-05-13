@@ -10,4 +10,10 @@ class Player < ApplicationRecord
   def final_friendly
     final_game.strftime("%m-%d-%Y") unless final_game.nil?
   end
+
+  def height_ft
+    feet = height / 12
+    inches = height % 12
+    "#{feet}'#{inches}"
+  end
 end
