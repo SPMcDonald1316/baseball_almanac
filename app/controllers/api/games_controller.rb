@@ -22,7 +22,7 @@ class Api::GamesController < ApplicationController
     when 2000..2009
       @games = PlayByPlayTwoThousand.where("game_id LIKE '#{params[:team]}#{params[:year]}%' OR (game_id LIKE '%#{params[:year]}%' AND away_team_id LIKE '#{params[:team]}')").uniq{|game| game.game_id}
     when 2010..2019
-      @games = PlayByPlayTwoThousandTen.where("game_id LIKE '#{params[:team]}#{params[:year]}%' OR (game_id LIKE '%#{params[:year]}%' AND away_team_id LIKE '#{params[:team]}')").uniq{|game| game.game_id}
+      @games = PlayByPlayTwoThousandTen.select(:game_id, :away_team_id).where("game_id LIKE '#{params[:team]}#{params[:year]}%' OR (game_id LIKE '%#{params[:year]}%' AND away_team_id LIKE '#{params[:team]}')").uniq{|game| game.game_id}
     end
     render 'index.json.jb'
   end
