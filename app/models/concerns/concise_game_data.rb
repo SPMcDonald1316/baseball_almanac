@@ -3,9 +3,9 @@ module ConciseGameData
   def home_team
     team_abbr = game_id[0..2]
     year = game_id[3..6]
-    years = TeamStat.select(:team_id_retro, :name).where(year_id: year)
+    years = TeamStat.select(:team_id_retro, :name, :park).where(year_id: year)
     home_team = years.find_by(team_id_retro: team_abbr)
-    home_team.name
+    return home_team.name, home_team.park
   end
 
   def away_team
@@ -36,7 +36,7 @@ module ConciseGameData
     if bat_home_id == 0
       return away_team
     else
-      return home_team
+      return home_team[0]
     end
   end
 end
