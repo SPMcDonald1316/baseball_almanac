@@ -12,8 +12,12 @@ class Player < ApplicationRecord
   end
 
   def height_ft
-    feet = height / 12
-    inches = height % 12
-    "#{feet}'#{inches}"
+    if height == nil
+      return ""
+    else
+      feet = height / 12
+      inches = height % 12
+      return "#{feet}'#{inches}"
+    end
   end
 end
