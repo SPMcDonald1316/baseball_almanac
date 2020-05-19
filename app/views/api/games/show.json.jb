@@ -12,6 +12,7 @@
     pitcher: event.pitcher,
     event: event.event_tx,
     away_score: event.away_score_ct,
-    home_score: event.home_score_ct
+    home_score: event.home_score_ct,
+    rbi: event.rbi_ct
   }
 end
