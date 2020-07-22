@@ -25,3 +25,5 @@
 
 # Ignore large csv files for seeding database
 /lib/seeds
+
+.DS_Store
